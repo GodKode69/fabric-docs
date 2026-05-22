@@ -3,8 +3,8 @@
     "vitepress": "^2.0.0-alpha.17"
   },
   "scripts": {
-    "scripts:dev": "vitepress dev config",
-    "scripts:build": "vitepress build config",
-    "scripts:preview": "vitepress preview config"
+    "docs:dev": "vitepress dev md --config config/.vitepress",
+    "docs:build": "vitepress build md --config config/.vitepress",
+    "docs:preview": "vitepress preview md --config config/.vitepress"
   }
 }
