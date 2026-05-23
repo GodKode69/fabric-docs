@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
 
 <div class="stats-container">
 
-  <div class="stat-card">
+  <div class="stat-card" style="--bar: #c0eab8">
     <span v-if="statsLoaded" data-count="commands">{{ stats.commands }}</span>
     <span v-else class="stat-placeholder">—</span>
     <span> Commands </span>
@@ -120,7 +120,7 @@ onBeforeUnmount(() => {
     <span> Categories </span>
   </div>
 
-  <div class="stat-card">
+  <div class="stat-card" style="--bar: #b8e6ea">
     <span v-if="statsLoaded" data-count="guilds">{{ stats.guilds }}</span>
     <span v-else class="stat-placeholder">—</span>
     <span> Servers </span>
@@ -130,14 +130,14 @@ onBeforeUnmount(() => {
     <span> Users </span>
   </div>
 
-  <div class="stat-card stat-card--text">
+  <div class="stat-card stat-card--text" style="--bar: #c9b8ea">
       <span v-if="statsLoaded" class="uptime-val">{{ stats.uptime }}</span>
       <span v-else class="stat-placeholder">—</span>
       <hr>
     <span v-if="statsLoaded" class="ping-badge">{{ stats.ping }}ms</span>
   </div>
 
-  <div class="stat-card stat-card--text">
+  <div class="stat-card stat-card--text" style="--bar: #eab8cd">
     <span v-if="statsLoaded" data-count="executed">{{ stats.executed }}</span>
     <span v-else class="stat-placeholder">—</span>
     <span> Commands Executed </span>
@@ -374,16 +374,17 @@ html, body, a, button, input, textarea, select {
 
 .stat-card {
   position: relative;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.8rem;
   border-radius: 30px;
   text-align: center;
   background: var(--fabric-card);
   border: 1px solid var(--fabric-border);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+  box-shadow:
+    -4px 0 0 0 var(--bar, #7c5cff),
+    0 10px 40px rgba(0, 0, 0, 0.16);
   transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
-  overflow: hidden;
 }
 
 .stat-card:hover {
