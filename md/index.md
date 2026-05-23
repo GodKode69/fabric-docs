@@ -52,6 +52,7 @@ async function fetchStats() {
     const wasLoaded = statsLoaded.value
     stats.value = {
       commands: data.commands,
+      categories: data.categories,
       guilds: data.guilds,
       users: data.users,
       uptime: data.uptime?.formatted ?? '—',
