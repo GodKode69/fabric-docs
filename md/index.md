@@ -9,8 +9,8 @@ sidebar: false
 
 hero:
   name: "Fabric"
-  text: "Modern Discord Infrastructure"
-  tagline: "Moderation, automation, utility, music, and 400+ commands built into one sleek modular experience."
+  text: "All In One Discord Bot"
+  tagline: "Moderation, automation, utility, music, and more built into one sleek modular experience."
 
   image:
     src: /assets/f.gif
@@ -108,8 +108,6 @@ onBeforeUnmount(() => {
 
 <div class="stats-container">
 
-  <div class="stat-card"></div>
-
   <div class="stat-card">
     <span v-if="statsLoaded" data-count="commands">{{ stats.commands }}</span>
     <span v-else class="stat-placeholder">—</span>
@@ -137,6 +135,11 @@ onBeforeUnmount(() => {
     <span v-if="statsLoaded" class="ping-badge">{{ stats.ping }}ms</span>
   </div>
 
+  <div class="stat-card stat-card--text">
+    <span> Commands Executed </span>
+    <hr>
+    <span> Voice Connections </span>
+  </div>
 </div>
 
 ---
