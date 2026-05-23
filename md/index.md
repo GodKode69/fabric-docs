@@ -152,84 +152,54 @@ onBeforeUnmount(() => {
 
 # Core Systems
 
-<div class="feature-grid">
-
-<div class="feature-card">
-🛡 Moderation
-<hr>
-<p>
-Automod, anti-spam, logging, role management, bans, warnings,
-and advanced moderation systems.
-</p>
-</div>
-
-<div class="feature-card">
-⚙ Automation
-<hr>
-<p>
-Reaction roles, tickets, reminders, welcome systems,
-workflows, and server automation tools.
-</p>
-</div>
-
-<div class="feature-card">
-🎵 Music
-<hr>
-<p>
-Queue management, playlists, filters, low latency playback,
-and stable music streaming.
-</p>
-</div>
-
-<div class="feature-card">
-📊 Analytics
-<hr>
-<p>
-Server activity tracking, moderation history,
-logging pipelines, and operational insights.
-</p>
-</div>
-
-<div class="feature-card">
-⚡ Utilities
-<hr>
-<p>
-Fast utility commands and management tools
-designed for both admins and members.
-</p>
-</div>
-
-<div class="feature-card">
-✨ Experience
-<hr>
-<p>
-Clean interactions, polished UX, modern design language,
-and unified command systems.
-</p>
-</div>
-
+<div class="feature-grid core-grid">
+  <div class="feature-card" style="--bar: #b8c0ea">
+    🛡 Moderation
+    <hr>
+    <p>Automod, anti-spam, logging, role management, bans, warnings, and advanced moderation systems.</p>
+  </div>
+  <div class="feature-card" style="--bar: #eab8e6">
+    ⚙ Automation
+    <hr>
+    <p>Reaction roles, tickets, reminders, welcome systems, workflows, and server automation tools.</p>
+  </div>
+  <div class="feature-card" style="--bar: #eac9b8">
+    🎵 Music
+    <hr>
+    <p>Queue management, playlists, filters, low latency playback, and stable music streaming.</p>
+  </div>
+  <div class="feature-card" style="--bar: #cdeab8">
+    📊 Analytics
+    <hr>
+    <p>Server activity tracking, moderation history, logging pipelines, and operational insights.</p>
+  </div>
+  <div class="feature-card" style="--bar: #b8eae2">
+    ⚡ Utilities
+    <hr>
+    <p>Fast utility commands and management tools designed for both admins and members.</p>
+  </div>
+  <div class="feature-card" style="--bar: #bcb8ea">
+    ✨ Experience
+    <hr>
+    <p>Clean interactions, polished UX, modern design language, and unified command systems.</p>
+  </div>
 </div>
 
 ---
 
 # Special Features
 
-<div class="feature-grid">
-<div class="feature-card">
-Colouful Embeds
-<hr
-><p>
-Every embed has rotating embed colour from a pastel color pallete.
-</p>
-</div>
-
-<div class="feature-card">
-Automatic Message Deletion
-<hr>
-<p>
-The bot automatically deletes it's message automatically in 5 seconds, some messages may last upto 15 seconds.
-</p>
-</div>
+<div class="feature-grid special-grid">
+  <div class="feature-card" style="--bar: #eab8da">
+    Colourful Embeds
+    <hr>
+    <p>Every embed has rotating embed colour from a pastel color palette.</p>
+  </div>
+  <div class="feature-card" style="--bar: #ead5b8">
+    Automatic Message Deletion
+    <hr>
+    <p>The bot automatically deletes its messages in 5 seconds, some messages may last up to 15 seconds.</p>
+  </div>
 </div>
 
 <footer class="fabric-footer">
@@ -477,29 +447,30 @@ html, body, a, button, input, textarea, select {
   margin-top: 2rem;
 }
 
+/*
+  Discord-style accent bar on feature cards.
+  Each card carries --bar as an inline style.
+  We use a 4px wide box-shadow on the left edge — no pseudo-elements,
+  no overflow tricks, no border conflicts. Works regardless of
+  border-radius or backdrop-filter.
+*/
 .feature-card {
-  padding: 1.4rem;
-  border-radius: 30px;
+  padding: 1.4rem 1.4rem 1.4rem 1.6rem;
+  border-radius: 8px;
   background: var(--fabric-card);
   border: 1px solid var(--fabric-border);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    -4px 0 0 0 var(--bar, #7c5cff),
+    0 12px 40px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   border-color: rgba(124, 92, 255, 0.34);
   background: var(--fabric-card-strong);
-}
-
-.feature-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  font-size: 1.1rem;
-  letter-spacing: -0.03em;
-  color: var(--vp-c-text-1);
 }
 
 .feature-card p {
