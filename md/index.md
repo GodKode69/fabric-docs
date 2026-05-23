@@ -107,28 +107,32 @@ onBeforeUnmount(() => {
 
 <div class="stats-container">
 
+  <div class="stat-card"></div>
+
   <div class="stat-card">
-      <span v-if="statsLoaded" data-count="commands">{{ stats.commands }}</span>
-      <span v-else class="stat-placeholder">—</span>    
-    <p>Commands</p>
+    <span v-if="statsLoaded" data-count="commands">{{ stats.commands }}</span>
+    <span v-else class="stat-placeholder">—</span>
+    <span> Commands </span>
+    <hr>
+    <span v-if="statsLoaded" data-count="categories">{{ stats.categories }}</span>
+    <span v-else class="stat-placeholder">—</span>
+    <span> Categories </span>
   </div>
 
   <div class="stat-card">
-      <span v-if="statsLoaded" data-count="guilds">{{ stats.guilds }}</span>
-      <span v-else class="stat-placeholder">—</span>
-    <p>Servers</p>
-  </div>
-
-  <div class="stat-card">
-      <span v-if="statsLoaded" data-count="users">{{ stats.users }}</span>
-      <span v-else class="stat-placeholder">—</span>
-    <p>Users Reached</p>
+    <span v-if="statsLoaded" data-count="guilds">{{ stats.guilds }}</span>
+    <span v-else class="stat-placeholder">—</span>
+    <span> Servers </span>
+    <hr>
+    <span v-if="statsLoaded" data-count="users">{{ stats.users }}</span>
+    <span v-else class="stat-placeholder">—</span>
+    <span> Users </span>
   </div>
 
   <div class="stat-card stat-card--text">
       <span v-if="statsLoaded" class="uptime-val">{{ stats.uptime }}</span>
       <span v-else class="stat-placeholder">—</span>
-    <p>Uptime</p>
+      <hr>
     <span v-if="statsLoaded" class="ping-badge">{{ stats.ping }}ms</span>
   </div>
 
