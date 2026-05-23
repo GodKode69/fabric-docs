@@ -108,34 +108,26 @@ onBeforeUnmount(() => {
 <div class="stats-container">
 
   <div class="stat-card">
-    <h2>
       <span v-if="statsLoaded" data-count="commands">{{ stats.commands }}</span>
-      <span v-else class="stat-placeholder">—</span>
-    </h2>
+      <span v-else class="stat-placeholder">—</span>    
     <p>Commands</p>
   </div>
 
   <div class="stat-card">
-    <h2>
       <span v-if="statsLoaded" data-count="guilds">{{ stats.guilds }}</span>
       <span v-else class="stat-placeholder">—</span>
-    </h2>
     <p>Servers</p>
   </div>
 
   <div class="stat-card">
-    <h2>
       <span v-if="statsLoaded" data-count="users">{{ stats.users }}</span>
       <span v-else class="stat-placeholder">—</span>
-    </h2>
     <p>Users Reached</p>
   </div>
 
   <div class="stat-card stat-card--text">
-    <h2>
       <span v-if="statsLoaded" class="uptime-val">{{ stats.uptime }}</span>
       <span v-else class="stat-placeholder">—</span>
-    </h2>
     <p>Uptime</p>
     <span v-if="statsLoaded" class="ping-badge">{{ stats.ping }}ms</span>
   </div>
@@ -149,7 +141,8 @@ onBeforeUnmount(() => {
 <div class="feature-grid">
 
 <div class="feature-card">
-<h2>🛡 Moderation</h2>
+🛡 Moderation
+<hr>
 <p>
 Automod, anti-spam, logging, role management, bans, warnings,
 and advanced moderation systems.
@@ -157,7 +150,8 @@ and advanced moderation systems.
 </div>
 
 <div class="feature-card">
-<h2>⚙ Automation</h2>
+⚙ Automation
+<hr>
 <p>
 Reaction roles, tickets, reminders, welcome systems,
 workflows, and server automation tools.
@@ -165,7 +159,8 @@ workflows, and server automation tools.
 </div>
 
 <div class="feature-card">
-<h2>🎵 Music</h2>
+🎵 Music
+<hr>
 <p>
 Queue management, playlists, filters, low latency playback,
 and stable music streaming.
@@ -173,7 +168,8 @@ and stable music streaming.
 </div>
 
 <div class="feature-card">
-<h2>📊 Analytics</h2>
+📊 Analytics
+<hr>
 <p>
 Server activity tracking, moderation history,
 logging pipelines, and operational insights.
@@ -181,7 +177,8 @@ logging pipelines, and operational insights.
 </div>
 
 <div class="feature-card">
-<h2>⚡ Utilities</h2>
+⚡ Utilities
+<hr>
 <p>
 Fast utility commands and management tools
 designed for both admins and members.
@@ -189,13 +186,36 @@ designed for both admins and members.
 </div>
 
 <div class="feature-card">
-<h2>✨ Experience</h2>
+✨ Experience
+<hr>
 <p>
 Clean interactions, polished UX, modern design language,
 and unified command systems.
 </p>
 </div>
 
+</div>
+
+---
+
+# Special Features
+
+<div class="feature-grid">
+<div class="feature-card">
+Colouful Embeds
+<hr
+><p>
+Every embed has rotating embed colour from a pastel color pallete.
+</p>
+</div>
+
+<div class="feature-card">
+Automatic Message Deletion
+<hr>
+<p>
+The bot automatically deletes it's message automatically in 5 seconds, some messages may last upto 15 seconds.
+</p>
+</div>
 </div>
 
 <footer class="fabric-footer">
