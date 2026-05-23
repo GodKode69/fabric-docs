@@ -53,6 +53,8 @@ async function fetchStats() {
     stats.value = {
       commands: data.commands,
       categories: data.categories,
+      executed: data.executed,
+      voice: data.voice,
       guilds: data.guilds,
       users: data.users,
       uptime: data.uptime?.formatted ?? '—',
@@ -136,8 +138,12 @@ onBeforeUnmount(() => {
   </div>
 
   <div class="stat-card stat-card--text">
+    <span v-if="statsLoaded" data-count="executed">{{ stats.executed }}</span>
+    <span v-else class="stat-placeholder">—</span>
     <span> Commands Executed </span>
     <hr>
+    <span v-if="statsLoaded" data-count="voice">{{ stats.voice }}</span>
+    <span v-else class="stat-placeholder">—</span>
     <span> Voice Connections </span>
   </div>
 </div>
